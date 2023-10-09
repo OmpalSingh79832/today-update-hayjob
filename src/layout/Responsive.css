@@ -1,0 +1,82 @@
+@media screen and (max-width:1300px) and (min-width:1200px) {}
+
+@media screen and (max-width:991px) and (min-width:768px) {}
+
+@media screen and (max-width:767px) and (min-width:480px) {}
+
+@media screen and (max-width:480px) and (min-width:350px) {
+
+    .nav-list {
+        display: none;
+    }
+
+    .navbar {
+        width: 516px;
+    }
+
+    .home-banner {
+        background: #f6f0fa;
+        height: 469px;
+        width: 516px;
+
+    }
+
+
+    .first-input {
+        margin-left: 13px;
+    }
+
+    .first-input input {
+        width: 417px;
+    }
+
+    .mt-5 {
+        margin-right: 55px;
+    }
+
+
+    .second-input select {
+        display: none;
+    }
+
+    .experience-text {
+        display: none;
+    }
+
+    .button-input {
+        display: none;
+    }
+
+    .location-icon {
+        display: none;
+    }
+
+    .experience-icon {
+        display: none;
+    }
+
+    .button-1 {
+        width: 25rem;
+        margin-top: -10px;
+    }
+
+    .button-2 {
+        width: 25rem;
+        margin-top: 20px;
+    }
+
+    .text-center h1 {
+        font-size: 26px;
+        margin-bottom: 34px;
+    }
+
+    .advance-search {
+        display: none;
+    }
+
+    .toggle-icon {
+        margin-top: 2px;
+        margin-left: 22px;
+        position: fixed !important;
+    }
+}

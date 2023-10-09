@@ -1,0 +1,83 @@
+.Logo-footer {
+    width: 100px;
+    margin-left: 50px;
+    margin-top: 30px;
+    border-radius: 50%;
+}
+
+.footer-page {
+    background-color: #007aff;
+    padding-bottom: 20px;
+}
+
+.product-footer {
+    margin-top: 50px;
+
+}
+
+.developer-prod {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 13px;
+}
+
+.company-footer {
+    margin-top: 50px;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 13px;
+}
+
+.footer-btn {
+    margin-top: 50px;
+    margin-bottom: 13px;
+    margin-left: 20px;
+    background-color: #c93f3f;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+}
+
+.footer-btn:hover {
+    transform: scaleX(1.2);
+    background: rgb(44, 92, 235);
+}
+
+.follow-footer {
+    margin-top: 50px;
+}
+
+.footer-icon {
+    font-size: 23px;
+    margin: 0 5px;
+    cursor: pointer;
+    margin-top: px;
+    color: white;
+}
+
+.footer-icon:hover {
+    color: rgb(17, 17, 18);
+
+}
+
+.prod-footer1 {
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 13px;
+    color: white;
+}
+
+.prod-footer1:hover {
+    color: black;
+    margin-left: 4px;
+
+}
+
+.para-footer {
+    font-size: 13.4px;
+    margin-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 24px;
+    color: rgb(237, 234, 234);
+}
