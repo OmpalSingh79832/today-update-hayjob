@@ -14,14 +14,13 @@ body {
 .navbar {
   background-color: #f6f0fa;
   /* background-color: transparent; */
-  position: absolute;
+  position: relative;
   color: black;
   display: flex;
+  width: 100%;
   position: sticky !important;
   top: 0;
   z-index: 111;
-
-
 }
 
 
@@ -107,8 +106,23 @@ p {
   color: #007aff;
 }
 
-.trainning-system {
-  width: 0%;
+.trainning-system:after {
+  content: '';
+  position: absolute;
+  width: 40% !important;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(33, 134, 53);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+
+}
+
+.trainning-system:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .dropdown-text:after {
@@ -168,8 +182,12 @@ p {
 }
 
 .toggle-icon {
-  margin-top: 22px;
-  margin-left: 32px;
+  margin-top: 12px !important;
+  margin-left: 22px !important;
+  /* position: fixed !important; */
+  top: 0;
+
+
 }
 
 
@@ -177,10 +195,8 @@ to
 /* HomePage */
 
 .home-banner {
-  background-color: #f6f0fa;
-  /* background-image: url("../src/assest/hero-section-desktop-guest.svg"); */
-  margin-left: 0px;
-  height: 387px;
+  background-color: #f6f0fa !important;
+  height: 497px !important;
   background-position: bottom;
   background-size: cover;
   background-position-x: -193px;
@@ -192,6 +208,7 @@ to
 .first-input {
   margin-left: 100px;
   position: relative;
+  overflow: hidden !important;
 
 }
 
@@ -391,8 +408,18 @@ to
   display: block;
 }
 
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset, -2px) !important;
+  right: auto;
+}
 
 
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, -2px) !important;
+  left: auto;
+}
 
 /*  */
 
@@ -1038,6 +1065,15 @@ to
   width: 19px !important;
   height: 19px;
 }
+
+
+.copy-right {
+  margin-left: 450px;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+
 
 /* 
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');

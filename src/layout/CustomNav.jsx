@@ -6,25 +6,30 @@ import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 // import "font-awesome";
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import { } from 'react'
+import { useNavigate } from 'react-router-dom';
+
 
 function CustomNav() {
+    const navigate = useNavigate()
+
+
     return (
         <div className='z-index-10'>
             <SideNav onSelect={selected => { console.log(selected) }}
             >
                 <SideNav.Toggle className="toggle-icon" />
                 <SideNav.Nav defaultSelected="home" >
-                    <NavItem   >
+                    <NavItem>
                         <NavIcon ><i className='fa fa-fw fa-user' style={{ fontSize: "1.5em", color: "black" }} /></NavIcon>
                         <NavText style={{ backgroundColor: "" }}>Hello & Welcome! </NavText>
                     </NavItem>
                     <NavItem>
                         <NavIcon><i className='fa fa-fw fa-right-to-bracket' style={{ fontSize: "1.5em", color: "black" }} /></NavIcon>
-                        <NavText> Login </NavText>
+                        <NavText onClick={() => { navigate("/login") }}> Login </NavText>
                     </NavItem>
                     <NavItem>
                         <NavIcon><i className='fa fa-fw fa-user-shield' style={{ fontSize: "1.5em", color: "black" }} /></NavIcon>
-                        <NavText> Employer Login </NavText>
+                        <NavText onClick={() => { navigate("/register") }}> Register </NavText>
                     </NavItem>
                     <NavItem>
                         <NavIcon><i className='fa fa-fw fa-servicestack' style={{ fontSize: "1.5em", color: "black" }} /></NavIcon>

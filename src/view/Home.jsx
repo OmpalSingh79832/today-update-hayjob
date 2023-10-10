@@ -4,12 +4,12 @@ import { BsSearch } from "react-icons/bs";
 import { BiMicrophone } from "react-icons/bi";
 import { ImLocation2 } from "react-icons/im";
 import { BsCalendar2PlusFill } from "react-icons/bs";
-
+import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 import CapgeminiImg from "../assets/capgemini.jpeg";
 import TCSImg from "../assets/tcs.jpeg";
@@ -22,21 +22,10 @@ import QuessImg from "../assets/quess.jpeg";
 import WtwImg from "../assets/wtw.jpeg";
 import XorientImg from "../assets/xorient.jpeg";
 import ZensorImg from "../assets/zensar.jpeg";
+import "../layout/Responsive.css";
 
-// const experience = [
 
-//   { year: "Less than 1 Year" },
-//   { year: "1 Year" },
-//   { year: "2 Years" },
-//   { year: "3 Years" },
-//   { year: "4 Years" },
-//   { year: "5 Years" },
-//   { year: "6 Years" },
-//   { year: "7 Years" },
-//   { year: "8 Years" },
-//   { year: "9 Years" },
-//   { year: "Experience" }
-// ]
+
 function Home() {
 
 
@@ -44,7 +33,7 @@ function Home() {
 
 
     <>
-      <div className='home-banner'>
+      <div className='home-banner' style={{ backgroundColor: "#f6f0fa", height: "378px" }}>
         <div className="row d-flex p-2  ">
           <div className="col-lg-4 first-input d-flex">
             <BsSearch className='mt-5 search-icons'></BsSearch>
@@ -105,43 +94,77 @@ function Home() {
       <div className="container">
         <div className="row company-details">
           <h2>Employers of Choices</h2>
-          <Swiper
-            slidesPerView={6}
-            spaceBetween={30}
-            centeredSlides={true}
-            loop={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Navigation]}
-            className="mySwiper"
-          >
-            <SwiperSlide><img src={TCSImg} alt="" className='tcs-img' /></SwiperSlide>
-            <SwiperSlide><img src={CapgeminiImg} alt="" className='tcs-img2' /></SwiperSlide>
-            <SwiperSlide><img src={CocgnizantImg} alt="" className='tcs-img3' /></SwiperSlide>
-            <SwiperSlide><img src={GenpactImg} alt="" className='tcs-img4' /></SwiperSlide>
-            <SwiperSlide><img src={InfosysImg} alt="" className='tcs-img5' /></SwiperSlide>
-            <SwiperSlide><img src={NessImg} alt="" className='tcs-img6' /></SwiperSlide>
-            <SwiperSlide><img src={PublicesImg} alt="" className='tcs-img7' /></SwiperSlide>
-            <SwiperSlide><img src={QuessImg} alt="" className='tcs-img8' /></SwiperSlide>
-            <SwiperSlide><img src={WtwImg} alt="" className='tcs-img9' /></SwiperSlide>
-            <SwiperSlide><img src={XorientImg} alt="" className='tcs-img10' /></SwiperSlide>
-            <SwiperSlide><img src={ZensorImg} alt="" className='tcs-img11' /> </SwiperSlide>
-            <SwiperSlide><img src={InfosysImg} alt="" className='tcs-img5' /></SwiperSlide>
-            <SwiperSlide><img src={WtwImg} alt="" className='tcs-img9' /></SwiperSlide>
-          </Swiper>
+          <div className="slider-container-employer-all">
+            <Swiper
+              slidesPerView={6}
+              spaceBetween={30}
+              centeredSlides={true}
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Navigation, Autoplay]}
+              className="mySwiper for-responsive-swiper"
+            >
+              <SwiperSlide ><img src={TCSImg} alt="" className='tcs-img' /></SwiperSlide>
+              <SwiperSlide><img src={CapgeminiImg} alt="" className='tcs-img2' /></SwiperSlide>
+              <SwiperSlide><img src={CocgnizantImg} alt="" className='tcs-img3' /></SwiperSlide>
+              <SwiperSlide><img src={GenpactImg} alt="" className='tcs-img4' /></SwiperSlide>
+              <SwiperSlide><img src={InfosysImg} alt="" className='tcs-img5' /></SwiperSlide>
+              <SwiperSlide><img src={NessImg} alt="" className='tcs-img6' /></SwiperSlide>
+              <SwiperSlide><img src={PublicesImg} alt="" className='tcs-img7' /></SwiperSlide>
+              <SwiperSlide><img src={QuessImg} alt="" className='tcs-img8' /></SwiperSlide>
+              <SwiperSlide><img src={WtwImg} alt="" className='tcs-img9' /></SwiperSlide>
+              <SwiperSlide><img src={XorientImg} alt="" className='tcs-img10' /></SwiperSlide>
+              <SwiperSlide><img src={ZensorImg} alt="" className='tcs-img11' /> </SwiperSlide>
+              <SwiperSlide><img src={InfosysImg} alt="" className='tcs-img5' /></SwiperSlide>
+              <SwiperSlide><img src={WtwImg} alt="" className='tcs-img9' /></SwiperSlide>
+            </Swiper>
+          </div>
+          <div className="slider-container-employer-2">
+            <Swiper
+              slidesPerView={2}
+              spaceBetween={-60}
+              centeredSlides={true}
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Navigation]}
+              className="mySwiper for-responsive-swiper"
+            >
+              <SwiperSlide ><img src={TCSImg} alt="" className='tcs-img' /></SwiperSlide>
+              <SwiperSlide><img src={CapgeminiImg} alt="" className='tcs-img2' /></SwiperSlide>
+              <SwiperSlide><img src={CocgnizantImg} alt="" className='tcs-img3' /></SwiperSlide>
+              <SwiperSlide><img src={GenpactImg} alt="" className='tcs-img4' /></SwiperSlide>
+              <SwiperSlide><img src={InfosysImg} alt="" className='tcs-img5' /></SwiperSlide>
+              <SwiperSlide><img src={NessImg} alt="" className='tcs-img6' /></SwiperSlide>
+              <SwiperSlide><img src={PublicesImg} alt="" className='tcs-img7' /></SwiperSlide>
+              <SwiperSlide><img src={QuessImg} alt="" className='tcs-img8' /></SwiperSlide>
+              <SwiperSlide><img src={WtwImg} alt="" className='tcs-img9' /></SwiperSlide>
+              <SwiperSlide><img src={XorientImg} alt="" className='tcs-img10' /></SwiperSlide>
+              <SwiperSlide><img src={ZensorImg} alt="" className='tcs-img11' /> </SwiperSlide>
+              <SwiperSlide><img src={InfosysImg} alt="" className='tcs-img5' /></SwiperSlide>
+              <SwiperSlide><img src={WtwImg} alt="" className='tcs-img9' /></SwiperSlide>
+            </Swiper>
+          </div>
         </div>
       </div>
 
       <div className='top-companies'>
         <h1>Top Companies Hiring</h1>
         <div className="container mt-5 mb-4 all-images ">
-          <div className="row " style={{ marginLeft: "200px" }}>
+          <div className="row placed-candidate" style={{ marginLeft: "200px" }}>
             <div className="col-lg-2  ">
               <div className="img-1">
                 <p>Placed Candidate- 25+</p>
@@ -204,20 +227,28 @@ function Home() {
       <div className='remote-job'>
         <h1 className='text-center'>Remote Jobs</h1>
       </div>
+      <div className="slider-section3">
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Scrollbar, A11y]}
+          spaceBetween={10}
+          slidesPerView={3}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
 
-      <div className="container mb-5 " style={{ cursor: "pointer" }}>
-        <div className="row">
-          <div className="col-lg-4">
-            <div className='shadow px-3 rounded'>
-              <div className="d-flex p-2 justify-content-between w-100">
+          <SwiperSlide>
+            <div className='shadow px-4 rounded'>
+              <div className="d-flex  justify-content-between w-100">
                 <span>Hot</span>
                 <span> 0 days ago</span>
-
               </div>
-              <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+              <h4 className='fw-bold fs-5'>Sap Functional Consultant Gurugram</h4>
               <p>v tech solutions </p>
               <span>
-
                 <BsCalendar2PlusFill /> 0 to 3 Yrs
               </span>
               <span className='ms-3'>
@@ -234,87 +265,349 @@ function Home() {
                 <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
               </div>
             </div>
+
+          </SwiperSlide>
+
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4 rounded'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Gurgaon
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+
+
+
+            <SwiperSlide>
+              <div className='shadow px-4 rounded'>
+                <div className="d-flex  justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Hyderabad
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+
+
+
+            <SwiperSlide>
+              <div className='shadow px-4 rounded'>
+                <div className="d-flex  justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Delhi
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='shadow px-4 rounded'>
+                <div className="d-flex  justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Gurgaon
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='shadow px-3 rounded'>
+                <div className="d-flex p-2 justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Gurgaon
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
           </div>
-
-
-          <div className="col-lg-4">
-            <div className='shadow px-3 rounded'>
-              <div className="d-flex p-2 justify-content-between w-100">
-                <span>Hot</span>
-                <span> 0 days ago</span>
-
-              </div>
-              <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
-              <p>v tech solutions </p>
-              <span>
-
-                <BsCalendar2PlusFill /> 0 to 3 Yrs
-              </span>
-              <span className='ms-3'>
-                <ImLocation2 />
-                Hyderabad
-              </span>
-              <div className="d-flex mt-2 para-pp">
-                <p className=' ' >Be an Early Applicant</p>
-                <p className='ms-2 ' >Remote</p>
-                <p className='ms-2 ' >9 Position</p>
-              </div>
-              <div className="d-flex justify-content-between w-100 p-2 ">
-                <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
-                <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div className="col-lg-4">
-            <div className='shadow px-3 rounded'>
-              <div className="d-flex p-2 justify-content-between w-100">
-                <span>Hot</span>
-                <span> 0 days ago</span>
-
-              </div>
-              <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
-              <p>v tech solutions </p>
-              <span>
-
-                <BsCalendar2PlusFill /> 0 to 3 Yrs
-              </span>
-              <span className='ms-3'>
-                <ImLocation2 />
-                Delhi
-              </span>
-              <div className="d-flex mt-2 para-pp">
-                <p className=' ' >Be an Early Applicant</p>
-                <p className='ms-2 ' >Remote</p>
-                <p className='ms-2 ' >9 Position</p>
-              </div>
-              <div className="d-flex justify-content-between w-100 p-2 ">
-                <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
-                <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        </Swiper>
       </div>
+      <div className="slider-section1">
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Scrollbar, A11y]}
+          spaceBetween={3}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+        </Swiper>
+      </div>
+
+
 
       <div className='remote-job'>
         <h1 className='text-center'>Pharmacy Jobs</h1>
       </div>
+      <div className="slider-section3">
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Scrollbar, A11y]}
+          spaceBetween={10}
+          slidesPerView={3}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
 
-      <div className="container mb-5 " style={{ cursor: "pointer" }}>
-        <div className="row">
-          <div className="col-lg-4">
-            <div className='shadow px-3 rounded'>
-              <div className="d-flex p-2 justify-content-between w-100">
+          <SwiperSlide>
+            <div className='shadow px-4 rounded'>
+              <div className="d-flex  justify-content-between w-100">
                 <span>Hot</span>
                 <span> 0 days ago</span>
-
               </div>
-              <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+              <h4 className='fw-bold fs-5'>Sap Functional Consultant Gurugram</h4>
               <p>v tech solutions </p>
               <span>
-
                 <BsCalendar2PlusFill /> 0 to 3 Yrs
               </span>
               <span className='ms-3'>
@@ -331,87 +624,348 @@ function Home() {
                 <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
               </div>
             </div>
+
+          </SwiperSlide>
+
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4 rounded'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Gurgaon
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+
+
+
+            <SwiperSlide>
+              <div className='shadow px-4 rounded'>
+                <div className="d-flex  justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Hyderabad
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+
+
+
+            <SwiperSlide>
+              <div className='shadow px-4 rounded'>
+                <div className="d-flex  justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Delhi
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='shadow px-4 rounded'>
+                <div className="d-flex  justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Gurgaon
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='shadow px-3 rounded'>
+                <div className="d-flex p-2 justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Gurgaon
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
           </div>
-
-
-          <div className="col-lg-4">
-            <div className='shadow px-3 rounded'>
-              <div className="d-flex p-2 justify-content-between w-100">
-                <span>Hot</span>
-                <span> 0 days ago</span>
-
-              </div>
-              <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
-              <p>v tech solutions </p>
-              <span>
-
-                <BsCalendar2PlusFill /> 0 to 3 Yrs
-              </span>
-              <span className='ms-3'>
-                <ImLocation2 />
-                Hyderabad
-              </span>
-              <div className="d-flex mt-2 para-pp">
-                <p className=' ' >Be an Early Applicant</p>
-                <p className='ms-2 ' >Remote</p>
-                <p className='ms-2 ' >9 Position</p>
-              </div>
-              <div className="d-flex justify-content-between w-100 p-2 ">
-                <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
-                <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div className="col-lg-4">
-            <div className='shadow px-3 rounded'>
-              <div className="d-flex p-2 justify-content-between w-100">
-                <span>Hot</span>
-                <span> 0 days ago</span>
-
-              </div>
-              <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
-              <p>v tech solutions </p>
-              <span>
-
-                <BsCalendar2PlusFill /> 0 to 3 Yrs
-              </span>
-              <span className='ms-3'>
-                <ImLocation2 />
-                Delhi
-              </span>
-              <div className="d-flex mt-2 para-pp">
-                <p className=' ' >Be an Early Applicant</p>
-                <p className='ms-2 ' >Remote</p>
-                <p className='ms-2 ' >9 Position</p>
-              </div>
-              <div className="d-flex justify-content-between w-100 p-2 ">
-                <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
-                <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        </Swiper>
       </div>
+      <div className="slider-section1">
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Scrollbar, A11y]}
+          spaceBetween={3}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+        </Swiper>
+      </div>
+
 
       <div className='remote-job'>
         <h1 className='text-center'>Fresher Jobs</h1>
       </div>
+      <div className="slider-section3">
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Scrollbar, A11y]}
+          spaceBetween={10}
+          slidesPerView={3}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
 
-      <div className="container mb-5 " style={{ cursor: "pointer" }}>
-        <div className="row">
-          <div className="col-lg-4">
-            <div className='shadow px-3 rounded'>
-              <div className="d-flex p-2 justify-content-between w-100">
+          <SwiperSlide>
+            <div className='shadow px-4 rounded'>
+              <div className="d-flex  justify-content-between w-100">
                 <span>Hot</span>
                 <span> 0 days ago</span>
-
               </div>
-              <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+              <h4 className='fw-bold fs-5'>Sap Functional Consultant Gurugram</h4>
               <p>v tech solutions </p>
               <span>
-
                 <BsCalendar2PlusFill /> 0 to 3 Yrs
               </span>
               <span className='ms-3'>
@@ -428,69 +982,322 @@ function Home() {
                 <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
               </div>
             </div>
+
+          </SwiperSlide>
+
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4 rounded'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Gurgaon
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+
+
+
+            <SwiperSlide>
+              <div className='shadow px-4 rounded'>
+                <div className="d-flex  justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Hyderabad
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+
+
+
+            <SwiperSlide>
+              <div className='shadow px-4 rounded'>
+                <div className="d-flex  justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Delhi
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='shadow px-4 rounded'>
+                <div className="d-flex  justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Gurgaon
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='shadow px-3 rounded'>
+                <div className="d-flex p-2 justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+
+                </div>
+                <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
+                <p>v tech solutions </p>
+                <span>
+
+                  <BsCalendar2PlusFill /> 0 to 3 Yrs
+                </span>
+                <span className='ms-3'>
+                  <ImLocation2 />
+                  Gurgaon
+                </span>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
           </div>
-
-
-          <div className="col-lg-4">
-            <div className='shadow px-3 rounded'>
-              <div className="d-flex p-2 justify-content-between w-100">
-                <span>Hot</span>
-                <span> 0 days ago</span>
-
-              </div>
-              <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
-              <p>v tech solutions </p>
-              <span>
-
-                <BsCalendar2PlusFill /> 0 to 3 Yrs
-              </span>
-              <span className='ms-3'>
-                <ImLocation2 />
-                Hyderabad
-              </span>
-              <div className="d-flex mt-2 para-pp">
-                <p className=' ' >Be an Early Applicant</p>
-                <p className='ms-2 ' >Remote</p>
-                <p className='ms-2 ' >9 Position</p>
-              </div>
-              <div className="d-flex justify-content-between w-100 p-2 ">
-                <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
-                <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div className="col-lg-4">
-            <div className='shadow px-3 rounded'>
-              <div className="d-flex p-2 justify-content-between w-100">
-                <span>Hot</span>
-                <span> 0 days ago</span>
-
-              </div>
-              <h4 className='fw-bold fs-5'>Sap Functional Consultant- <br /> Gurugram</h4>
-              <p>v tech solutions </p>
-              <span>
-
-                <BsCalendar2PlusFill /> 0 to 3 Yrs
-              </span>
-              <span className='ms-3'>
-                <ImLocation2 />
-                Delhi
-              </span>
-              <div className="d-flex mt-2 para-pp">
-                <p className=' ' >Be an Early Applicant</p>
-                <p className='ms-2 ' >Remote</p>
-                <p className='ms-2 ' >9 Position</p>
-              </div>
-              <div className="d-flex justify-content-between w-100 p-2 ">
-                <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
-                <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        </Swiper>
       </div>
+      <div className="slider-section1">
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Scrollbar, A11y]}
+          spaceBetween={3}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+          <div className="container mb-5 " style={{ cursor: "pointer" }}>
+            <SwiperSlide>
+              <div className='shadow px-4  card rounded slider1-card'>
+                <div className="d-flex justify-content-between w-100">
+                  <span>Hot</span>
+                  <span> 0 days ago</span>
+                </div>
+                <div>
+                  <h4 className='fw-bold fs-5'>Sap Functional Consultant-  Gurugram</h4>
+                  <p>v tech solutions </p>
+                  <span>
+                    <BsCalendar2PlusFill /> 0 to 3 Yrs
+                  </span>
+                  <span className='ms-3'>
+                    <ImLocation2 />
+                    Gurgaon
+                  </span>
+                </div>
+                <div className="d-flex mt-2 para-pp">
+                  <p className=' ' >Be an Early Applicant</p>
+                  <p className='ms-2 ' >Remote</p>
+                  <p className='ms-2 ' >9 Position</p>
+                </div>
+                <div className="d-flex justify-content-between w-100 p-2 ">
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Not Intrested</span>
+                  <span style={{ color: "#7c44ff" }} className='fw-bold'>Apply</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+        </Swiper>
+      </div>
+
     </>
   )
 }

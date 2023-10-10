@@ -13,7 +13,7 @@ const NavBar = () => {
       <CustomNav />
       <nav className="navbar" >
         <div className='d-flex justify-content-between' style={{ width: "97%" }}>
-          <img src={Logo} alt="" className='nav-logo' />
+          <img src={Logo} alt="" className='nav-logo' onClick={() => { navigate("/") }} />
           <div>
             <ul className="nav-list">
               <li className="nav-item dropdown">
@@ -66,7 +66,7 @@ const NavBar = () => {
                 </ul>
               </li>
               <li className="nav-item dropdown">
-                <span className="dropdown-text trainning-system" style={{ paddingRight: "90px" }}>Trainning </span>
+                <span className="dropdown-text trainning-system after-hover-width" style={{ paddingRight: "90px" }}>Trainning </span>
               </li>
               <div className='vr' style={{ height: "40px", width: "2px", marginTop: "10px" }}></div>
               {/* <Link to="/login"> */}
@@ -76,7 +76,7 @@ const NavBar = () => {
               </li>
               {/* </Link> */}
               <li className="nav-item dropdown">
-                <span className="dropdown-text" style={{ color: "black" }}>Register</span>
+                <span className="dropdown-text" style={{ color: "black" }} onClick={() => { navigate("/register") }}>Register</span>
               </li>
               <li className="nav-item dropdown">
                 <span className="dropdown-text" >Employers Login</span>

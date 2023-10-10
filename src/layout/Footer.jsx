@@ -59,7 +59,7 @@ function Footer() {
 
 
             </div>
-            <p style={{ marginLeft: "450px", marginTop: "20px", fontWeight: "700" }}>&copy;2023 HayJob. All rights reserved</p>
+            <p className='copy-right'>&copy;2023 HayJob. All rights reserved</p>
         </div>
     )
 }
