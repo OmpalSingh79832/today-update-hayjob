@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
@@ -1075,124 +1076,271 @@ to
 
 
 
-/* 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+/* Advanced Search */
 
-* {
-  box-sizing: border-box;
+
+.modal-content.content-height {
+  width: 698px;
+  height: 27rem;
 }
 
-body {
-  background: linear-gradient(120deg, #dd61ed, #167bff);
-  height: 100%;
-  font-weight: 400;
-  overflow: hidden;
-  font-family: 'Fira Sans', sans-serif;
+.key-skill-input p {
+  margin-bottom: -1px;
 }
 
-form {
-  padding: 30px;
-  width: 40%;
-  height: 60%;
-  border: 2px solid red;
-  background-color: white;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 50px 0 0 400px;
+.serach-bar {
+  position: absolute;
+  margin-top: 16px;
+  margin-left: 12px;
+}
+
+.key-skill-input input {
+  width: 18rem;
+  height: 2.8rem;
+  outline: none;
+}
+
+.key-skill-input input::placeholder {
+  padding-left: 40px;
+}
+
+.key-skill-location p {
+  margin-bottom: -1px;
+  margin-left: 3px;
+}
+
+.location-icon-adv {
+  position: absolute;
+  margin-top: 16px;
+  margin-left: 10px;
+}
+
+.key-skill-location select {
+  width: 18rem;
+  height: 2.8rem;
+  outline: none;
+  padding-left: 30px;
+}
+
+.second-experience select option {
+  /* padding-left: 34px; */
+  width: 1rem;
+
+}
+
+.expert {
+  margin-bottom: -10px;
+  margin-left: -10px;
+}
+
+.years-of-ex {
+  width: 9rem;
+  height: 2.8rem;
+  outline: none;
+  padding-left: 15px;
+  margin-bottom: 70px;
+  margin-top: 10px;
+  margin-left: -12px;
+}
+
+.years-of-ex-month {
+  width: 9rem;
+  height: 2.8rem;
+  outline: none;
+  padding-left: 15px;
+  margin-bottom: 70px;
+  margin-top: 40px;
+  margin-left: -17px;
+}
+
+.expected-salary {
+  margin-top: 18px;
+}
+
+.expected-salary select {
+  padding-left: 10px;
+}
+
+.industry-bs {
+  margin-top: -66px;
+  gap: 20px;
+}
+
+.advanced-search-btn button {
+  margin-right: 280px;
 }
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label,
-span {
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
+
+
+/* Remote jOb */
+
+
+.swiper-android .swiper-slide,
+.swiper-ios .swiper-slide,
+.swiper-wrapper {
+  transform: translate3d(0px, 0, 0);
+  margin-left: 10px !important;
 }
 
-body,
-html,
-.App,
-#root,
-.auth-wrapper {
-  width: 100%;
-  height: 100%;
+.swiper {
+  width: 800px !important;
+  cursor: pointer;
 }
 
-.navbar-light {
-  background-color: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-}
-
-.auth-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-}
-
-.auth-inner {
-  width: 450px;
-  margin: auto;
-  background: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-  padding: 40px 55px 45px 55px;
-  border-radius: 15px;
-  transition: all .3s;
-}
-
-.auth-wrapper .form-control:focus {
-  border-color: #167bff;
-  box-shadow: none;
-}
-
-.auth-wrapper h3 {
+.swiper-slide {
+  height: 100px;
+  /* background: #882525; */
+  line-height: 20px;
   text-align: center;
-  margin: 0;
-  line-height: 1;
-  padding-bottom: 20px;
-}
-
-.custom-control-label {
-  font-weight: 400;
-}
-
-input.form-control {
-  width: 450px;
+  width: 407px !important;
+  margin-bottom: 50px !important;
 
 }
 
-.forgot-password,
-.forgot-password a {
-  text-align: right;
-  font-size: 13px;
-  padding-top: 10px;
-  color: #7f7d7d;
-  margin: 0;
+.v-tech-solution {
+  margin-right: 160px;
 }
 
-.forgot-password a {
-  color: #167bff;
-}
-
-
-
-/* 
-.container {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  max-width: 500px;
+.location-gurugaon {
+  justify-content: space-between;
   width: 100%;
-  margin: auto;
+  gap: 40px;
+  display: flex;
+}
 
-} */
+.swiper-slide:nth-child(2) {
+  background: white;
+}
+
+.swiper-slide:nth-child(3) {
+  background: white;
+}
+
+.swiper-slide:nth-child(4) {
+  background: white;
+}
+
+.swiper-slide:nth-child(5) {
+  background: white;
+}
+
+.swiper-slide:nth-child(6) {
+  background: #96cc7d;
+}
+
+.swiper-slide:nth-child(7) {
+  background: white;
+}
+
+
+
+/* Login Modal Page  */
+
+.login-module-lg p {
+  text-align: center;
+}
+
+.login-module-lg img {
+  margin-left: 84px;
+}
+
+
+/* *******************************/
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 320px;
+  height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+  -ms-transform: translate3d(0%, 0, 0);
+  -o-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+  padding: 15px 15px 80px;
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog {
+  left: -320px;
+  -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+  transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.in .modal-dialog {
+  left: 0;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+  right: -320px;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+  transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+  right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-header {
+  border-bottom-color: #EEEEEE;
+  background-color: #FAFAFA;
+}
+
+/* ----- v CAN BE DELETED v ----- */
+body {
+  background-color: #78909C;
+}
+
+.demo {
+  padding-top: 60px;
+  padding-bottom: 110px;
+}
+
+.btn-demo {
+  margin: 15px;
+  padding: 10px 15px;
+  border-radius: 0;
+  font-size: 16px;
+  background-color: #FFFFFF;
+}
+
+.btn-demo:focus {
+  outline: 0;
+}
+
+.demo-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: #212121;
+  text-align: center;
+}
+
+.demo-footer>a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}

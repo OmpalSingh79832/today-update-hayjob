@@ -10,8 +10,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from "./view/Home";
 import Footer from "./layout/Footer";
-// import Login from "./user/Login";
-// import SignUp from "./user/SignUp";
+import LoginModal from "./user/LoginModal";
+
+// import Sliderl from "./view/Sliderl";
+
+
 
 
 
@@ -21,21 +24,21 @@ function App() {
 
   return (
     <>
+
+      {/* <LoginModal /> */}
       <NavBar />
+
       <Routes>
 
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Loginm />} />
         <Route path='/register' element={<Registerm />} />
         <Route path='/forgot-password' element={<Forgotm />} />
-        <Route path='/' component={Loginm} />
 
+        <Route path='/' component={Loginm} />
+        <Route path='/login-modal' element={<LoginModal />} />
       </Routes>
-      <Footer />
-      {/* <Home /> */}
-      {/* <Login /> */}
-      {/* <SignUp /> */}
-      {/* <Forgot /> */}
+      {/* <Footer /> */}
 
     </>
   )

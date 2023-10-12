@@ -6,6 +6,7 @@ import { BsLinkedin } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";
 import GoogleplayImg from "../assets/googleplay.png";
 import AppstoreImg from "../assets/appstore.png"
+import { RightSlide } from "./RightSlide";
 const Login = () => {
     const regis = useNavigate()
 
@@ -14,6 +15,8 @@ const Login = () => {
     const [remember, setRemember] = useState(false);
     const [validate, setValidate] = useState({});
     const [showPassword, setShowPassword] = useState(false);
+
+
 
     const validateLogin = () => {
         let isValid = true;
@@ -61,6 +64,38 @@ const Login = () => {
             setShowPassword(true)
         }
     }
+    // const [mobileNumber, setMobileNumber] = useState('');
+
+
+    const [inputValue, setInputValue] = useState('');
+
+
+    const handleChange = (event) => {
+        setInputValue(event.target.value);
+
+    };
+
+    let inputField;
+
+    if (inputValue.length >= 7 || inputValue.length === 10) {
+        inputField = (
+            <input
+                type="number"
+                value={inputValue}
+                onChange={handleChange}
+                placeholder="Enter 7-digit number"
+            />
+        );
+    } else {
+        inputField = (
+            <input
+                type="email"
+                value={inputValue}
+                onChange={handleChange}
+                placeholder="Enter email"
+            />
+        );
+    }
 
     return (
         // <Link className="text-link" to="/register" > Register</Link></div>
@@ -87,14 +122,17 @@ const Login = () => {
                             <div className="auth-form-container text-start">
                                 <form className='login-page' method="POST" onSubmit={authenticate} autoComplete={'off'}>
                                     <div className='email-text'>
-                                        <input type="email"
+                                        {/* <input type="email"
                                             className={`form-control ${validate.validate && validate.validate.email ? 'is-invalid ' : ''}`}
                                             id="email"
                                             name="email"
                                             value={email}
                                             placeholder="Enter Email-Id"
                                             onChange={(e) => setEmail(e.target.value)}
-                                        />
+                                        /> */}
+                                        {inputField}
+
+
                                         <div className={`invalid-feedback text-start ${(validate.validate && validate.validate.email) ? 'd-block' : 'd-none'}`} >
                                             {(validate.validate && validate.validate.email) ? validate.validate.email[0] : ''}
                                         </div>
@@ -155,6 +193,7 @@ const Login = () => {
                 </div>
 
             </div>
+            <RightSlide />
         </>
     );
 }
