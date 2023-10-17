@@ -2,46 +2,46 @@ import { } from "react";
 import styled, { keyframes, css } from "styled-components";
 
 function Sliderl() {
-    const row1 = [
-        "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/january/Dd5e9M2ngHQkAEP9s2Hu6agZh9EvDYHZQBaPs5xy.jpeg",
-        "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/september/N2zW75QqgL2iUuUUDmrc3vVPu7P3g0fW1WNi82Ph.jpeg",
-        "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/january/HN5y7hp89MHcEWgrSi9haJG4iDYWE3DHH0RvvEau.jpeg",
-        "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2022/april/Mp2fRLKl9YmxG7YBxanGbRYdkzMayIcwhiEe8HyD.jpeg",
-        "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/july/yynMGMz9qDDEqNQPLmijAa0FqfdmRuUNrI1icveZ.jpeg",
-        "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/february/Zw3suPwERv1Pb9pmRxKGti1T1SNRqyS7caf3j3Uq.jpeg",
-        "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/march/QEzey8P9T3AkU5VMMm2LRXyyUXhH5JxA75GVWiK8.jpeg",
-        "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/october/jgrsZbv93knv0ZbfyrVRjuGactExcDQZ7L31k4nf.jpeg",
-        "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/october/YReWYFMk24w9ourRJ2RxQf1k81sJU14UyDHrvKgU.jpeg",
-        "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/august/yTKoftvbNtE2p1x5VqUo5NDOUfwnH2SSOL0BolFB.jpeg",
-        "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/september/15WS2PQ92d4ic3bvZcKPVBpvR7OwXuTdjW94riUL.jpeg",
-    ];
+  const row1 = [
+    "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/january/Dd5e9M2ngHQkAEP9s2Hu6agZh9EvDYHZQBaPs5xy.jpeg",
+    "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/september/N2zW75QqgL2iUuUUDmrc3vVPu7P3g0fW1WNi82Ph.jpeg",
+    "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/january/HN5y7hp89MHcEWgrSi9haJG4iDYWE3DHH0RvvEau.jpeg",
+    "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2022/april/Mp2fRLKl9YmxG7YBxanGbRYdkzMayIcwhiEe8HyD.jpeg",
+    "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/july/yynMGMz9qDDEqNQPLmijAa0FqfdmRuUNrI1icveZ.jpeg",
+    "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/february/Zw3suPwERv1Pb9pmRxKGti1T1SNRqyS7caf3j3Uq.jpeg",
+    "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/march/QEzey8P9T3AkU5VMMm2LRXyyUXhH5JxA75GVWiK8.jpeg",
+    "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/october/jgrsZbv93knv0ZbfyrVRjuGactExcDQZ7L31k4nf.jpeg",
+    "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/october/YReWYFMk24w9ourRJ2RxQf1k81sJU14UyDHrvKgU.jpeg",
+    "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/august/yTKoftvbNtE2p1x5VqUo5NDOUfwnH2SSOL0BolFB.jpeg",
+    "https://media.foundit.in/trex/prod-cdn/media/promotedemployer/2023/september/15WS2PQ92d4ic3bvZcKPVBpvR7OwXuTdjW94riUL.jpeg",
+  ];
 
 
 
-    return (
-        <AppContainer>
-            <Wrapper>
-                <Text>Employers of Choice</Text>
+  return (
+    <AppContainer >
+      {/* <Wrapper >
+        <Text>Employers of Choice</Text>
 
-                <Marquee>
-                    <MarqueeGroup>
-                        {row1.map((el) => (
-                            <ImageGroup>
-                                <Image src={el} />
-                            </ImageGroup>
-                        ))}
-                    </MarqueeGroup>
-                    <MarqueeGroup>
-                        {row1.map((el) => (
-                            <ImageGroup>
-                                <Image src={el} />
-                            </ImageGroup>
-                        ))}
-                    </MarqueeGroup>
-                </Marquee>
-            </Wrapper>
-        </AppContainer>
-    );
+        <Marquee >
+          <MarqueeGroup >
+            {row1.map((el) => (
+              <ImageGroup >
+                <Image src={el} />
+              </ImageGroup>
+            ))}
+          </MarqueeGroup>
+          <MarqueeGroup>
+            {row1.map((el) => (
+              <ImageGroup >
+                <Image src={el} />
+              </ImageGroup>
+            ))}
+          </MarqueeGroup>
+        </Marquee>
+      </Wrapper> */}
+    </AppContainer>
+  );
 }
 
 export default Sliderl;
@@ -62,14 +62,11 @@ const Wrapper = styled.div`
   height: fit-content;
 
   display: flex;
-  ${'' /* align-items: center; */}
-  ${'' /* margin-left: 90px; */}
-  justify-content: center;
   flex-direction: column;
 `;
 
 const Text = styled.div`
-  font-size: 20px;
+  font-size: 30px;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   margin-left: 40px;
   font-weight: 600;
@@ -123,7 +120,7 @@ const MarqueeGroup2 = styled.div`
 const ImageGroup = styled.div`
   display: grid;
   place-items: center;
-  width: clamp(10rem, 1rem + 40vmin, 30rem);
+  ${'' /* width: clamp(10rem, 1rem + 40vmin, 30rem); */}
   padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
 `;
 

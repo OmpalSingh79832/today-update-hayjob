@@ -222,7 +222,7 @@ to
 .mic-icon {
   position: absolute;
   top: 5px;
-  right: 25px;
+  right: 90px;
   font-size: 25px;
 }
 
@@ -333,10 +333,11 @@ to
   font-size: 18px;
 }
 
-.text-center {
+.text-center11 {
   margin-right: 20px;
   margin-top: 19px;
-
+  /* width: 421px; */
+  /* margin-left: 290px; */
 }
 
 .text-center h1 {
@@ -667,6 +668,7 @@ to
 .img-1 {
   background-image: url("././assets/capgemini.jpeg");
   width: 113%;
+  margin: 0 10px;
   height: 80px;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -688,6 +690,7 @@ to
 .img-2 {
   background-image: url("././assets/jio.png");
   width: 113%;
+  margin: 0 10px;
   height: 80px;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -707,6 +710,7 @@ to
 .img-3 {
   background-image: url("././assets/icici.png");
   width: 113%;
+  margin: 0 10px;
   height: 80px;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -727,6 +731,7 @@ to
 .img-4 {
   background-image: url("././assets/sopra.png");
   width: 113%;
+  margin: 0 10px;
   height: 80px;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -764,13 +769,13 @@ to
 
 .img-6 {
   background-image: url("././assets/reliance.png");
-  width: 100%;
+  width: 113%;
   height: 80px;
   background-repeat: no-repeat;
   cursor: pointer;
   border: 1px solid #ececec;
   box-shadow: 0 0 15px 0 rgba(220, 220, 220, .5);
-  margin-right: 50px;
+  /* margin-right: 50px; */
   background-size: contain;
 }
 
@@ -785,6 +790,7 @@ to
 .img-7 {
   background-image: url("././assets/hewlett.png");
   width: 113%;
+  margin: 0 10px;
   height: 80px;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -804,6 +810,7 @@ to
 .img-8 {
   background-image: url("././assets/techmahindra.png");
   width: 113%;
+  margin: 0 10px;
   height: 80px;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -823,6 +830,7 @@ to
 .img-9 {
   background-image: url("././assets/sbi.webp");
   width: 113%;
+  margin: 0 10px;
   height: 80px;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -841,13 +849,14 @@ to
 
 .img-10 {
   background-image: url("././assets/mindtree.png");
-  width: 113%;
+  width: 99%;
+  /* margin: 0 10px; */
   height: 80px;
   background-repeat: no-repeat;
   cursor: pointer;
   border: 1px solid #ececec;
   box-shadow: 0 0 15px 0 rgba(220, 220, 220, .5);
-  margin-right: 50px;
+  /* margin-right: 50px; */
   background-size: contain;
 }
 
@@ -880,12 +889,29 @@ to
 .main-content-login-page {
   margin-right: 180px !important;
   margin-left: auto;
+  width: 500px;
+}
+
+.email-or-phone {
+  text-align: start;
+  margin-left: 20px;
+  margin-bottom: -1px;
+}
+
+.passwor-destination {
+  margin-bottom: -17px;
+  margin-top: 15px;
+  margin-left: 5px;
 }
 
 .main-content-login-page p {
-  margin-top: 10px;
-  margin-right: 223px !important;
-  margin-bottom: -px !important;
+  .main-content-login-page p {
+    margin-top: 19px;
+    margin-right: 270px !important;
+    margin-bottom: -18px !important;
+    margin-left: 6px !important;
+    /* margin-bottom: -1rem !important; */
+  }
 }
 
 .shadow {
@@ -897,8 +923,9 @@ to
 .login-to-register p {
   /* background-color: #007aff; */
   margin-left: 16rem;
-  margin-top: 2rem;
+  margin-top: -1.7rem;
   margin-bottom: 0px;
+  font-size: 14px;
 }
 
 .login-to-register p button {
@@ -910,6 +937,7 @@ to
 
 .login-to-register h4 {
   margin-left: 20px;
+  color: #000;
   font-weight: 650;
 }
 
@@ -918,6 +946,10 @@ to
   margin-top: 30px;
   gap: 60px;
   cursor: pointer;
+}
+
+.Icons-login p {
+  font-size: 17px;
 }
 
 .google-icon {
@@ -936,7 +968,9 @@ to
 }
 
 .or-system hr {
-  width: 190px;
+
+  width: 214px;
+
 }
 
 .or-system span {
@@ -945,18 +979,18 @@ to
 }
 
 .login-page {
-  margin-left: 30px;
+  margin-left: 15px;
 }
 
 .email-text input {
-  /* margin-top: -30px; */
-  width: 410px;
+  width: 421px;
   height: 45px;
   border-radius: 5px;
-  border: 0.5px solid gray;
+  border: 1px solid gray;
   padding-left: 10px;
   outline: none;
 }
+
 
 .email-text {
   border-radius: 4px !important;
@@ -983,6 +1017,9 @@ to
 .password-text {
   margin-top: 15px;
   border-radius: 10px !important;
+  padding-bottom: -10px;
+  width: 421px;
+
 }
 
 .password-text input {
@@ -994,6 +1031,22 @@ to
   outline: none;
 }
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.number-box {
+  position: absolute;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  padding: 9px 20px 10px 20px;
+  border-radius: 5px;
+}
+
+
 .foget-pass {
   margin-top: 20px;
   margin-left: 280px;
@@ -1001,6 +1054,11 @@ to
   background-color: white;
   color: #007aff;
   font-weight: 650;
+}
+
+
+.email-text input {
+  padding: 0 0 0 80px;
 }
 
 .login-btn {
@@ -1027,32 +1085,46 @@ to
 }
 
 .download-page {
-  width: 390px;
-  padding-bottom: 30px;
+  width: 422px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  margin-top: 5px;
+  /* margin-right: -20px; */
+  margin-left: 20px;
+}
+
+.show-login {
+  display: none;
+}
+
+.theme-btn {
+  width: 87%;
+  margin-left: -54px;
+  margin-top: 21px;
 }
 
 .download-page span {
   text-align: center;
-  margin-top: 20px;
-  padding-bottom: 15px;
 }
 
 .show-hide {
   position: absolute !important;
-  /* margin-left: 50px; */
-  /* margin-right: 30px; */
   right: 0px;
   bottom: 10px;
-  /* margin-left: 10px; */
   margin-right: 9px;
 }
 
 .google-img {
   /* width: 150px; */
   height: 40px;
-  margin-left: 60px;
+  margin-left: 90px;
   padding-right: 15px;
   color: white;
+}
+
+.login-nav-tag {
+  font-size: 15px;
+  font-family: 'Onest', sans-serif !important;
 }
 
 .app-img {
@@ -1184,7 +1256,7 @@ to
 }
 
 .swiper {
-  width: 800px !important;
+  width: 800px;
   cursor: pointer;
 }
 
@@ -1200,6 +1272,8 @@ to
 
 .v-tech-solution {
   margin-right: 160px;
+  text-align: start;
+  font-size: 15px;
 }
 
 .location-gurugaon {
@@ -1207,6 +1281,11 @@ to
   width: 100%;
   gap: 40px;
   display: flex;
+  font-size: 15px;
+}
+
+span {
+  font-size: 15px;
 }
 
 .swiper-slide:nth-child(2) {
@@ -1343,4 +1422,195 @@ body {
   font-weight: bold;
   font-size: 16px;
   color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+.ctnd {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #ecf0f1;
+  float: right;
+}
+
+.ctnd buttn {
+  width: 86px;
+  height: 40px;
+  background-color: #f9cb11;
+  border: none;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+
+  cursor: pointer;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  outline: 0;
+  transition: all 0.25s ease;
+
+  &:hover {
+    opacity: 0.8;
+    transition: all 0.25s ease;
+
+  }
+}
+
+.menu {
+  background: white;
+  height: 250vh;
+  width: 580px;
+  opacity: 0;
+  z-index: 222;
+  position: absolute;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  transform: translateX(50%);
+  right: 0;
+  top: 0;
+  margin-right: -302px;
+
+
+  .ctnd ul {
+    padding: 0;
+    margin: 0;
+
+    .activ {
+      font-size: 16px;
+      border-bottom: 1px solid #fff;
+      transition: all 0.25s ease;
+      animation: fadeInRight .25s ease forwards;
+      opacity: 0;
+
+      &:hover {
+        opacity: 0.8;
+        transition: all 0.25s ease;
+        background: #000;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.25s ease;
+  transform: translateX(0);
+  float: right;
+  right: 0;
+  top: 0;
+  margin-top: -36px;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.custom-nav-to div p {
+  color: #000 !important;
+}
+
+.rx-cut-btn {
+  margin-left: -51px;
+  background-color: black;
+  color: white;
+  font-size: 48px;
+  margin-top: 3px;
+  padding: 4px;
+}
+
+.rx-cut-btn:hover {
+  background-color: blue;
+  border-radius: 50%;
+  /* font-size: 0px; */
+}
+
+
+
+
+
+
+/*============================= otp================================================= */
+
+
+/* .otpContainer {
+  width: 80%;
+  margin: auto;
+} */
+
+.otpContainer input {
+  outline: none;
+}
+
+.otpInput {
+  width: 36px;
+  height: 34px;
+  margin: 10px;
+  border: 1px solid gray;
+  /* margin-left: 90px; */
+}
+
+
+/* my css */
+.placed-candidate {
+  justify-content: space-between;
+}
+
+.all-images div {
+  justify-content: space-between;
+  margin-left: 0;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-slider-3 {
+  width: 90%;
+  margin: auto;
+}
+
+.custom-slider-3 div div div div {
+  line-height: 1.0;
+}
+
+.fs-5 {
+  text-align: start;
 }

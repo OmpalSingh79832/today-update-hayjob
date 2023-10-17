@@ -1,14 +1,14 @@
-import { } from 'react'
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Form from '../../src/utilities/Forms'
 import { BsGoogle } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";
+import { RxCross1 } from "react-icons/rx";
 import GoogleplayImg from "../assets/googleplay.png";
 import AppstoreImg from "../assets/appstore.png"
-const LoginModal = () => {
 
+const NewLogin = () => {
     const regis = useNavigate()
 
     const [email, setEmail] = useState('');
@@ -16,6 +16,8 @@ const LoginModal = () => {
     const [remember, setRemember] = useState(false);
     const [validate, setValidate] = useState({});
     const [showPassword, setShowPassword] = useState(false);
+
+
 
     const validateLogin = () => {
         let isValid = true;
@@ -64,7 +66,7 @@ const LoginModal = () => {
         }
     }
     const [mobileNumber, setMobileNumber] = useState('');
-
+    console.log(mobileNumber)
 
 
     const [inputValue, setInputValue] = useState('');
@@ -105,21 +107,31 @@ const LoginModal = () => {
         );
     }
 
-    return (
-        <>
 
-            <section className="vh-100">
-                <div className="container py-5 h-100">
-                    <div className="row d-flex align-items-center justify-content-center h-100">
-                        <div className="col-md-8 col-lg-7 col-xl-6 login-module-lg ">
-                            <img src="https://www.foundit.in/rio/public/images/login-illustration.png" className="img-fluid" alt="Phone image" />
-                            <p>Create your profile now and be visible to the top <br /> recruiters in the world</p>
-                        </div>
-                        <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1 pb-5">
+    const [menuState, setMenuState] = useState({
+        style: 'menu',
+        menuStatus: 'open',
+    });
+
+    const handleClick = () => {
+        setMenuState((prevState) => ({
+            menuStatus: prevState.menuStatus === 'open' ? 'close' : 'open',
+            style: prevState.menuStatus === 'open' ? 'menu active' : 'menu',
+        }));
+    };
+
+    return (
+        // <Link className="text-link" to="/register" > Register</Link></div>
+        <>
+            <div className="row " style={{ marginTop: "5rem" }}>
+                <div className="col-lg-6 col-md-6 col-sm-12"></div>
+                <div className='col-lg-6 col-md-6 col-sm-12'>
+                    {/* <span className="login-nav-tag" id="login-to-res">Login</span> */}
+                    <div >
+                        {/* <span ><RxCross1 className=" rx-cut-btn" /></span> */}
+                        <ul className='custom-nav-to'>
                             <div className='login-to-register'>
-                                <div style={{ marginLeft: "-45px" }}>
-                                    <p >New to HayJob?<button type='' onClick={() => { regis("/register") }}>Register</button></p><hr style={{ width: "90%", color: "gray" }} />
-                                </div>
+                                <p style={{ marginLeft: "6rem" }}>New to HayJob?<button type='' onClick={() => { regis("/register") }}>Register</button></p><hr style={{ width: "70%", color: "gray" }} />
                                 <h4>Login</h4>
                             </div>
                             <div className='d-flex Icons-login'>
@@ -150,7 +162,7 @@ const LoginModal = () => {
                                                     </div>
                                                     <p className="passwor-destination">Password</p>
                                                     <div className='password-text ' style={{ position: "relative" }}>
-                                                        <div className="input-group password-input-group">
+                                                        <div className="input-group ">
                                                             <input type={showPassword ? 'text' : 'password'}
                                                                 className={`form-control ${validate.validate && validate.validate.password ? 'is-invalid ' : ''}`}
                                                                 name="password"
@@ -179,19 +191,19 @@ const LoginModal = () => {
                                                             </div>
                                                             <div className="col-6">
                                                                 <div className="forgot-password text-end">
-                                                                    <Link to="/forgot-password" className='forget-psw'>Forgot password?</Link>
+                                                                    <Link to="/forgot-password">Forgot password?</Link>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className="text-center">
-                                                        <button type="submit" style={{ height: "47px" }} className="btn btn-primary login-modal-login-btn  theme-btn ">Log In</button>
+                                                        <button type="submit" style={{ height: "47px" }} className="btn btn-primary   theme-btn">Log In</button>
                                                     </div>
                                                     <div className="login-via-otp ">
                                                         <button>Login Via OTP</button>
                                                     </div>
                                                 </form>
-                                                <div className='card py-4 download-page '>
+                                                <div className='card py-3 download-page '>
                                                     <span>Your dream job is a click away! Get <br /> the app on your mobile.</span>
                                                     <div className='d-flex  '>
                                                         <img src={GoogleplayImg} alt="" className='google-img ' />
@@ -204,14 +216,20 @@ const LoginModal = () => {
                                 </div>
 
                             </div>
-                        </div>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </div>
 
 
         </>
-    )
+    );
 }
 
-export default LoginModal
+export default NewLogin;
+
+
+
+
+
+

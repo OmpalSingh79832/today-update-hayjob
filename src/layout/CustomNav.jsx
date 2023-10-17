@@ -5,21 +5,53 @@ import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 
 // import "font-awesome";
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
-
+import { useDetectOutsideClick } from "./useDetectOutsideClick"
 
 function CustomNav() {
     const navigate = useNavigate()
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
+    const sliderRef = useRef(null);
+    const [isOpen, setIsOpen] = useState(false);
+
+    // Add event listeners to handle clicks outside the slider
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (sliderRef.current && !sliderRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        }
+
+        if (isOpen) {
+            document.addEventListener('click', handleClickOutside);
+        } else {
+            document.removeEventListener('click', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [isOpen]);
+
+
+
+
+
     return (
-        <div className='z-index-10'>
+        <div className='z-index-10'  >
             <SideNav onSelect={selected => { console.log(selected) }}
             >
+
                 <SideNav.Toggle className="toggle-icon" />
-                <SideNav.Nav defaultSelected="home" className={click ? ".sidenav---sidenav-nav---3tvij sidenav---expanded---1KdUL active" : " "} onClick={() => { handleClick }}>
+
+
+
+
+                <SideNav.Nav defaultSelected="home" >
+
                     <NavItem>
                         <NavIcon ><i className='fa fa-fw fa-user' style={{ fontSize: "1.5em", color: "black" }} /></NavIcon>
                         <NavText style={{ backgroundColor: "" }}>Hello & Welcome! </NavText>
@@ -36,139 +68,135 @@ function CustomNav() {
                         <NavIcon><i className='fa fa-fw fa-servicestack' style={{ fontSize: "1.5em", color: "black" }} /></NavIcon>
                         <NavText>Premium Services </NavText>
                     </NavItem>
+
                 </SideNav.Nav>
+
             </SideNav>
         </div>
     )
 }
 
-export default CustomNav
+export default CustomNav;
 
 
 
 
-// import { Link, NavLink } from 'react-router-dom';
-// import {
-//     ProSidebar,
-//     Menu,
-//     MenuItem,
-//     SubMenu,
-//     SidebarHeader,
-//     SidebarFooter,
-//     SidebarContent
-// } from 'react-pro-sidebar';
-// import {
-//     FaUser,
-//     FaAngleDoubleLeft,
-//     FaAngleDoubleRight,
-//     FaTachometerAlt,
-//     FaGem,
-//     FaList,
-//     FaRegLaughWink,
-//     FaHeart
-// } from 'react-icons/fa';
-// import sidebarBg from '../assets/jio.png';
 
-// export const CustomNav = ({
-//     image,
-//     collapsed,
-//     toggled,
-//     handleToggleSidebar,
-//     handleCollapsedChange
-// }) => {
-//     return (
-//         <ProSidebar
-//             image={image ? sidebarBg : false}
-//             collapsed={collapsed}
-//             toggled={toggled}
-//             onToggle={handleToggleSidebar}
-//             breakPoint="md"
-//         >
-//             {/* Header */}
-//             <SidebarHeader>
-//                 <Menu iconShape="circle">
-//                     {collapsed ? (
-//                         <MenuItem
-//                             icon={<FaAngleDoubleRight />}
-//                             onClick={handleCollapsedChange}
-//                         ></MenuItem>
-//                     ) : (
-//                         <MenuItem
-//                             suffix={<FaAngleDoubleLeft />}
-//                             onClick={handleCollapsedChange}
-//                         >
-//                             <div
-//                                 style={{
-//                                     padding: '9px',
-//                                     textTransform: 'uppercase',
-//                                     fontWeight: 'bold',
-//                                     fontSize: 15,
-//                                     letterSpacing: '1px'
-//                                 }}
-//                             >
-//                                 Pro Sidebar
-//                             </div>
-//                         </MenuItem>
-//                     )}
-//                 </Menu>
-//             </SidebarHeader>
-//             {/* Content */}
-//             <SidebarContent>
-//                 <Menu iconShape="circle">
-//                     <MenuItem
-//                         icon={<FaTachometerAlt />}
-//                         suffix={<span className="badge red">NEW</span>}
-//                     >
-//                         Dashboard
-//                         <NavLink to="/" />
-//                     </MenuItem>
-//                     {/* <MenuItem icon={<FaGem />}>Components </MenuItem> */}
-//                     <MenuItem icon={<FaGem />}>
-//                         Components <Link to="/components" />
-//                     </MenuItem>
-//                     <SubMenu
-//                         suffix={<span className="badge yellow">3</span>}
-//                         title={'With Suffix'}
-//                         icon={<FaRegLaughWink />}
-//                     >
-//                         <MenuItem>Submenu 1</MenuItem>
-//                         <MenuItem>Submenu 2</MenuItem>
-//                         <MenuItem>Submenu 3</MenuItem>
-//                     </SubMenu>
-//                     <SubMenu
-//                         prefix={<span className="badge gray">3</span>}
-//                         title={'With Prefix'}
-//                         icon={<FaHeart />}
-//                     >
-//                         <MenuItem>Submenu 1</MenuItem>
-//                         <MenuItem>Submenu 2</MenuItem>
-//                         <MenuItem>Submenu 3</MenuItem>
-//                     </SubMenu>
-//                     <SubMenu title={'Multi Level'} icon={<FaList />}>
-//                         <MenuItem>Submenu 1 </MenuItem>
-//                         <MenuItem>Submenu 2 </MenuItem>
-//                         <SubMenu title={'Submenu 3'}>
-//                             <MenuItem>Submenu 3.1 </MenuItem>
-//                             <MenuItem>Submenu 3.2 </MenuItem>
-//                         </SubMenu>
-//                     </SubMenu>
-//                 </Menu>
-//             </SidebarContent>
-//             {/* Footer */}
-//             <SidebarFooter style={{ textAlign: 'center' }}>
-//                 <div className="sidebar-btn-wrapper" style={{ padding: '16px' }}>
-//                     <Link
-//                         className="sidebar-btn"
-//                         style={{ cursor: 'pointer' }}
-//                         to="/profile"
-//                     >
-//                         <FaUser />
-//                         <span>My Account</span>
-//                     </Link>
+
+
+
+// import { } from 'react';
+// // import Button from 'react-bootstrap/Button';
+// class Otpinput extends React.Component {
+
+//     constructor(props) {
+//         super(props);
+//         this.state = { value: '', otp1: "", otp2: "", otp3: "", otp4: "", otp5: "", disable: true };
+//         this.handleChange = this.handleChange.bind(this);
+//         this.handleSubmit = this.handleSubmit.bind(this);
+
+//     }
+
+
+//     handleChange(value1, event) {
+
+//         this.setState({ [value1]: event.target.value });
+//     }
+
+//     handleSubmit(event) {
+
+//         const data = new FormData(event.target);
+//         console.log(this.state);
+//         event.preventDefault();
+//     }
+
+//     inputfocus = (elmnt) => {
+//         if (elmnt.key === "Delete" || elmnt.key === "Backspace") {
+//             const next = elmnt.target.tabIndex - 2;
+//             if (next > -1) {
+
+//                 elmnt.target.form.elements[next].focus()
+//             }
+//         }
+//         else {
+//             console.log("next");
+
+//             const next = elmnt.target.tabIndex;
+//             if (next < 5) {
+//                 elmnt.target.form.elements[next].focus()
+//             }
+//         }
+
+//     }
+
+
+//     render() {
+//         return (
+//             <form onSubmit={this.handleSubmit}>
+//                 <div className="otpContainer">
+
+//                     <input
+//                         name="otp1"
+//                         type="text"
+//                         autoComplete="off"
+//                         className="otpInput"
+//                         value={this.state.otp1}
+//                         onKeyPress={this.keyPressed}
+//                         onChange={e => this.handleChange("otp1", e)}
+//                         tabIndex="1" maxLength="1" onKeyUp={e => this.inputfocus(e)}
+
+//                     />
+//                     <input
+//                         name="otp2"
+//                         type="text"
+//                         autoComplete="off"
+//                         className="otpInput"
+//                         value={this.state.otp2}
+//                         onChange={e => this.handleChange("otp2", e)}
+//                         tabIndex="2" maxLength="1" onKeyUp={e => this.inputfocus(e)}
+
+//                     />
+//                     <input
+//                         name="otp3"
+//                         type="text"
+//                         autoComplete="off"
+//                         className="otpInput"
+//                         value={this.state.otp3}
+//                         onChange={e => this.handleChange("otp3", e)}
+//                         tabIndex="3" maxLength="1" onKeyUp={e => this.inputfocus(e)}
+
+//                     />
+//                     <input
+//                         name="otp4"
+//                         type="text"
+//                         autoComplete="off"
+//                         className="otpInput"
+//                         value={this.state.otp4}
+//                         onChange={e => this.handleChange("otp4", e)}
+//                         tabIndex="4" maxLength="1" onKeyUp={e => this.inputfocus(e)}
+//                     />
+
+//                     <input
+//                         name="otp5"
+//                         type="text"
+//                         autoComplete="off"
+//                         className="otpInput"
+//                         value={this.state.otp5}
+//                         onChange={e => this.handleChange("otp5", e)}
+//                         tabIndex="5" maxLength="1" onKeyUp={e => this.inputfocus(e)}
+//                     />
 //                 </div>
-//             </SidebarFooter>
-//         </ProSidebar>
-//     );
-// };
+//                 <Button className="primary" type="submit">
+//                     Submit
+//                 </Button>
+//             </form>
+//         );
+//     }
+// }
+
+
+// export default Otpinput;
+
+
 
 

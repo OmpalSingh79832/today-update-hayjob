@@ -12,13 +12,16 @@ function Home() {
   return (
     <>
       <div className='home-banner' style={{ backgroundColor: "#f6f0fa", height: "378px" }}>
-        <div className="row d-flex p-2  ">
-          <div className="col-lg-4 first-input d-flex">
-            <BsSearch className='mt-5 search-icons'></BsSearch>
-            <input type="text" placeholder=' Skills, Company or Job Title' />
-            <BiMicrophone className='mt-5 mic-icon' />
+        <div className="row p-2  ">
+          <div className="col-lg-4 col-md-6 col-sm-12 first-input ">
+            <div class="d-flex">
+
+              <BsSearch className='mt-5 search-icons'></BsSearch>
+              <input type="text" placeholder=' Skills, Company or Job Title' />
+              <BiMicrophone className='mt-5 mic-icon' />
+            </div>
           </div>
-          <div className="col-lg-2  second-input">
+          <div className="col-lg-2 col-md-6 col-sm-12  second-input">
             <ImLocation2 className='location-icon' />
             <select className="second-input" aria-label="Default select example">
               <option value="1">Location</option>
@@ -34,7 +37,7 @@ function Home() {
 
             {/* <input type="text" placeholder='Location' /> */}
           </div>
-          <div className="col-lg-2  third-input">
+          <div className="col-lg-2 col-md-6 col-sm-12  third-input">
             <BsCalendar2PlusFill className='experience-icon' />
             <select className="form-selct experience-text" aria-label="Default select example">
               <option value="1">Experience</option>
@@ -55,13 +58,13 @@ function Home() {
               ))}
             </select> */}
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-6 col-sm-12">
             <button className='button-input '> Search</button>
           </div>
           {/* <Link to="#" className='advance-search'>Advanced Search</Link> */}
           <a href="#" className='advance-search'><AdvancedSearch /></a>
         </div>
-        <div className='text-center'>
+        <div className='text-center11 text-center'>
           <h1>Find the job that is  <br />perfect for <span style={{ color: "#1f1fb2" }}>You</span> </h1>
           <button className='button-1 mx-3'>Upload Resume</button>
           <button className='button-2'>Register Now</button>
@@ -73,28 +76,28 @@ function Home() {
       <div className='top-companies'>
         <h1>Top Companies Hiring</h1>
         <div className="container mt-5 mb-4 all-images ">
-          <div className="row placed-candidate" style={{ marginLeft: "200px" }}>
-            <div className="col-lg-2  ">
+          <div className="row placed-candidate" style={{ marginLeft: "19px" }}>
+            <div className="col-lg-2 col-md-4  col-sm-6 ">
               <div className="img-1">
                 <p>Placed Candidate- 25+</p>
               </div>
             </div>
-            <div className="col-lg-2 ">
+            <div className="col-lg-2 col-md-4  col-sm-6">
               <div className="img-2">
                 <p>Placed Candidate- 17+</p>
               </div>
             </div>
-            <div className="col-lg-2 ">
+            <div className="col-lg-2 col-md-4  col-sm-6">
               <div className="img-3">
                 <p>Placed Candidate- 13+</p>
               </div>
             </div>
-            <div className="col-lg-2 ">
+            <div className="col-lg-2 col-md-4  col-sm-6">
               <div className="img-4">
                 <p>Placed Candidate- 19+</p>
               </div>
             </div>
-            <div className="col-lg-2 ">
+            <div className="col-lg-2 col-md-4  col-sm-6">
               <div className="img-5">
                 <p>Placed Candidate- 23+</p>
               </div>
@@ -102,28 +105,28 @@ function Home() {
           </div>
         </div>
         <div className="container mb-5 all-images " >
-          <div className="row " style={{ marginLeft: "200px" }}>
-            <div className="col-lg-2  ">
+          <div className="row " style={{ marginLeft: "19px" }}>
+            <div className="col-lg-2 col-md-4  col-sm-6 ">
               <div className="img-6">
                 <p>Placed Candidate- 28+</p>
               </div>
             </div>
-            <div className="col-lg-2 ">
+            <div className="col-lg-2 col-md-4  col-sm-6">
               <div className="img-7">
                 <p>Placed Candidate- 18+</p>
               </div>
             </div>
-            <div className="col-lg-2 ">
+            <div className="col-lg-2 col-md-4  col-sm-6">
               <div className="img-8">
                 <p>Placed Candidate- 22+</p>
               </div>
             </div>
-            <div className="col-lg-2 ">
+            <div className="col-lg-2 col-md-4  col-sm-6">
               <div className="img-9">
                 <p>Placed Candidate- 12+</p>
               </div>
             </div>
-            <div className="col-lg-2 ">
+            <div className="col-lg-2 col-md-4  col-sm-6">
               <div className="img-10">
                 <p>Placed Candidate- 17+</p>
               </div>

@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
+import { useNavigate } from 'react-router-dom'
 export default class SignUp extends Component {
     render() {
+        const navigate = useNavigate()
         return (
 
             <form>
@@ -39,7 +41,7 @@ export default class SignUp extends Component {
                     </button>
                 </div>
                 <p className="forgot-password text-right">
-                    Already registered <a href="/sign-in">sign in?</a>
+                    Already registered <a onClick={() => { navigate("/login-modal") }}>sign in?</a>
                 </p>
             </form>
         )

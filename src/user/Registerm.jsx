@@ -132,7 +132,7 @@ const Register = () => {
                             </form>
 
                             <hr />
-                            <div className="auth-option text-center pt-2">Have an account? <span type="button" onClick={() => { navgate("/login") }} >Sign in</span></div>
+                            <div className="auth-option text-center pt-2">Have an account? <span type="button" onClick={() => { navgate("/login-modal") }} >Sign in</span></div>
                         </div>
                     </div>
                 </div>
